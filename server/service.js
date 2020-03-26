@@ -36,6 +36,10 @@ if (app.get('env') === 'development') {
     });
 }
 
+app.get('/', (req, res) => {
+  res.json({message: 'works'});
+});
+
 app.put('/register/:servicename/:serviceversion/:serviceport', (req, res) => {
     const { servicename, serviceversion, serviceport } = req.params;
 
